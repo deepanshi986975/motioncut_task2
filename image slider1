@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+
+         <section class="slider-container">
+           
+            <div class="slider-images">
+                
+             <div class="slider-img">
+                <img src="highlands2.png" alt="1">
+                <h1>Highlands - Scotland</h1>
+                <div class="details">
+                    <h2>Highlands</h2>
+                    <p>The mountains are calling</p>
+                </div>
+              </div>
+              
+              
+        
+             <div class="slider-img ">
+                <img src="image1.png" alt="2">
+                <h1>peak</h1>
+                <div class="details">
+                    <h2>peak</h2>
+                    <p>Peak moments</p>
+                </div>
+             </div>
+       
+       
+             <div class="slider-img">
+                <img src="images2.png" alt="3">
+                <h1>Mountain</h1>
+                <div class="details">
+                    <h2>Mountain</h2>
+                    <p> Find me in the mountains</p>
+                </div>
+             </div>
+
+             <div class="slider-img active">
+              <img src="machu_piccu.png" alt="4">
+              <h1>machu-piccu</h1>
+              <div class="details">
+                  <h2>peru</h2>
+                  <p>Adventure is never far away</p>
+              </div>
+           </div>
+
+           <div class="slider-img">
+            <img src="images3.png" alt="5">
+            <h1>Mountain-Range </h1>
+            <div class="details">
+                <h2>Nepal</h2>
+                <p>Nature playground</p>
+            </div>
+         </div>
+
+         <div class="slider-img">
+          <img src="image4.png" alt="6">
+          <h1>Alps</h1>
+          <div class="details">
+              <h2>Switzerland</h2>
+              <p>Adventure awaits</p>
+          </div>
+       </div>
+
+       <div class="slider-img">
+        <img src="chamonix.png" alt="7">
+        <h1>Chamonix - France</h1>
+        <div class="details">
+            <h2>chamonix</h2>
+            <p>Let your dreams come true</p>
+        </div>
+       </div>
+             
+             
+            
+     </div>
+       
+     <a class="next" onclick="plusSlides(1)">❯</a>
+
+  </section>
+    
+   
+    <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+      
+      function plusSlides(n) {
+        showDivs(slideIndex += n);
+      }
+      
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("slider-img");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        x[slideIndex-1].style.display = "block";  
+      }
+      </script>
+    
+   
+</body>
+</html>
